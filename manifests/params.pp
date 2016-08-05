@@ -16,6 +16,7 @@
 #
 class datadog_agent::params {
   $conf_dir       = '/etc/dd-agent/conf.d'
+  $checks_dir     = '/etc/dd-agent/checks.d'
   $dd_user        = 'dd-agent'
   $dd_group       = 'root'
   $package_name   = 'datadog-agent'
