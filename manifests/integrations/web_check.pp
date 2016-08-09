@@ -6,8 +6,11 @@
 #   url
 #   timeout
 #
+# Example
+# puppet apply -e 'class {'datadog_agent::integrations::web_check': timeout => "1", urls => ["http://google.com","http://httpbin.org/status/400"],}'
+#
 class datadog_agent::integrations::web_check (
-  $urlsl         = undef,
+  $urls          = undef,
   $timeout       = 1,
   $expected_code = 200,
 ) inherits datadog_agent::params {
